@@ -2,7 +2,7 @@ test: ServerCountThrees.o readInt32BitLE.o directories
 	gcc ServerCountThrees.o readInt32BitLE.o -o ServerCountThrees
 	cp ServerCountThrees ../build
 	cp ../data/threesData.bin ../build
-	../build/ServerCountThrees	
+	exit	
 ServerCountThrees.o: ServerCountThrees.c readInt32BitLE.h
 	gcc -I . -c ServerCountThrees.c
 readInt32BitLE.o: readInt32BitLE.c readInt32BitLE.h
